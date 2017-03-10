@@ -11,7 +11,7 @@ namespace GoMicro.Forex.HostService
 
             var serviceName = "GoMicroForex";
             var serviceDescription = "Exchange rate micro-service";
-            var serviceDisplayName = "GoMicro Forex";
+            var serviceDisplayName = "GoMicro Forex Service";
             var serviceInstanceName = "GMFX01";
 
 
