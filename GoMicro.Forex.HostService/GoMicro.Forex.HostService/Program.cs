@@ -19,15 +19,16 @@ namespace GoMicro.Forex.HostService
 
             return (int)HostFactory.Run(serviceConfig =>
             {
+                serviceConfig.SetServiceName(serviceName);
+                serviceConfig.SetDescription(serviceDescription);
+                serviceConfig.SetDisplayName(serviceDisplayName);
+                serviceConfig.SetInstanceName(serviceInstanceName);
+
                 serviceConfig.UseAssemblyInfoForServiceInfo();
                 serviceConfig.RunAsPrompt();
                 serviceConfig.StartAutomatically();
                 serviceConfig.UseNLog();
 
-                serviceConfig.SetServiceName(serviceName);
-                serviceConfig.SetDisplayName(serviceDisplayName);
-                serviceConfig.SetInstanceName(serviceInstanceName);
-                serviceConfig.SetDescription(serviceDescription);
 
                 serviceConfig.Service<WebApiHostService>(serviceInstance =>
                 {
