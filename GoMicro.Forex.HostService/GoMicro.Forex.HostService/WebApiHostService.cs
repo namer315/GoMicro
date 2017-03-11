@@ -13,7 +13,7 @@ namespace GoMicro.Forex.HostService
         {
             try
             {
-                _log.Info("Topshelf Service > Being Started...");
+                _log.Info(">>> Topshelf Service >>> HostControl being Started...");
 
                 //DI.Container.Resolve<IActorSystemShell>().Start();
                 //DI.Container.Resolve<IApiShell>().Start();
@@ -27,12 +27,12 @@ namespace GoMicro.Forex.HostService
         }
         public bool Stop(HostControl hostControl)
         {
-            _log.Info("Topshelf Service > Being Stopped...");            
+            _log.Info(">>> Topshelf Service >>> HostControl being Stopped...");            
             return true;
         }
         public void ExecuteCustomCommand(int command)
         {
-            _log.Info($"Topshelf Service > system command:{command}");
+            _log.Info($">>> Topshelf Service >>> system command:{command}");
         }
     }
 }
