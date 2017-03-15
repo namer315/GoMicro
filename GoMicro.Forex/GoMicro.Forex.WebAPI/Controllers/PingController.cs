@@ -15,7 +15,7 @@ namespace GoMicro.Forex.WebApi.Controllers
 
         [HttpGet]
         //[Route("Ping")]
-        public CommonResult Index()
+        public CommonResult Get()
         {
             return new CommonResult(true,"Pong");
         }        

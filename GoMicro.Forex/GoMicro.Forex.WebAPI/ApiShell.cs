@@ -7,7 +7,7 @@ using Autofac.Integration.WebApi;
 
 namespace GoMicro.Forex.WebApi
 {
-    class ApiShell : IApiShell
+    public class ApiShell : IApiShell
     {
         private IDisposable _server;
         private IApiSettings _ApiStettings { get; }
@@ -36,6 +36,8 @@ namespace GoMicro.Forex.WebApi
                 config.Routes.MapHttpRoute("DefaultApi", "{controller}/{id}", new { id = RouteParameter.Optional });
                 config.MapHttpAttributeRoutes();
                 config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+                foreach (var r in config.Routes) Console.WriteLine(r.RouteTemplate);
 
                 appBuilder.UseWebApi(config);
             }

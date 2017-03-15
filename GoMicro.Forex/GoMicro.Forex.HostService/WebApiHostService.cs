@@ -30,7 +30,9 @@ namespace GoMicro.Forex.HostService
         }
         public bool Stop(HostControl hostControl)
         {
-            _log.Info(">>> Topshelf Service >>> HostControl being Stopped...");            
+            _log.Info(">>> Topshelf Service >>> HostControl being Stopped...");
+            IoC.Container.Resolve<IApiShell>().Stop();
+
             return true;
         }
         public void ExecuteCustomCommand(int command)
