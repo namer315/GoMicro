@@ -1,6 +1,9 @@
 ﻿using System;
 using Topshelf;
 using Topshelf.Logging;
+using Autofac;
+using GoMicro.Forex.DI;
+using GoMicro.Forex.WebApi;
 
 namespace GoMicro.Forex.HostService
 {
@@ -14,9 +17,9 @@ namespace GoMicro.Forex.HostService
             try
             {
                 _log.Info(">>> Topshelf Service >>> HostControl being Started...");
+                
+                IoC.Container.Resolve<IApiShell>().Start();
 
-                //DI.Container.Resolve<IActorSystemShell>().Start();
-                //DI.Container.Resolve<IApiShell>().Start();
                 return true;
             }
             catch (Exception e)

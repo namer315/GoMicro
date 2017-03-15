@@ -1,5 +1,8 @@
 ﻿using System;
 using Topshelf;
+using Autofac;
+using GoMicro.Forex.WebApi;
+using GoMicro.Forex.DI;
 
 namespace GoMicro.Forex.HostService
 {
@@ -14,10 +17,20 @@ namespace GoMicro.Forex.HostService
             var serviceDisplayName = "GoMicro Forex Service";
             var serviceInstanceName = "GMFX01";
 
+            IoC.BootstrapContainer(builder => {
+                
+                IApiSettings apiSettings = new ApiSettings()
+                {
+                    AskTimeOut = 10000,
+                    Url = "http://localhost:9091"
+                };
+                builder.RegisterInstance(apiSettings).As<IApiSettings>().SingleInstance();
 
-            // run topshelf service
+            });
 
-            return (int)HostFactory.Run(serviceConfig =>
+                // run topshelf service
+
+                return (int)HostFactory.Run(serviceConfig =>
             {
                 serviceConfig.SetServiceName(serviceName);
                 serviceConfig.SetDescription(serviceDescription);

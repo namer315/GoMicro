@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoMicro.Forex.HostService", "GoMicro.Forex.HostService\GoMicro.Forex.HostService.csproj", "{2E3FBD23-C174-4526-9B65-C477BC1A7588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoMicro.Forex.WebAPI", "GoMicro.Forex.WebAPI\GoMicro.Forex.WebAPI.csproj", "{13E79563-AB10-4C2B-BB17-3E06CD334601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoMicro.Forex.Core", "GoMicro.Forex.Core\GoMicro.Forex.Core.csproj", "{247B9539-6208-43F9-92F5-B7E9188E4779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2E3FBD23-C174-4526-9B65-C477BC1A7588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E3FBD23-C174-4526-9B65-C477BC1A7588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E3FBD23-C174-4526-9B65-C477BC1A7588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E79563-AB10-4C2B-BB17-3E06CD334601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E79563-AB10-4C2B-BB17-3E06CD334601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E79563-AB10-4C2B-BB17-3E06CD334601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E79563-AB10-4C2B-BB17-3E06CD334601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247B9539-6208-43F9-92F5-B7E9188E4779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247B9539-6208-43F9-92F5-B7E9188E4779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247B9539-6208-43F9-92F5-B7E9188E4779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247B9539-6208-43F9-92F5-B7E9188E4779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
