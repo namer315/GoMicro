@@ -11,13 +11,13 @@ namespace GoMicro.Forex.HostService
     {
         private readonly LogWriter _log = HostLogger.Get<WebApiHostService>();
 
-        public WebApiHostService() { }
+        //public WebApiHostService() { }
         public bool Start(HostControl hostControl)
         {
             try
             {
                 _log.Info(">>> Topshelf Service >>> HostControl being Started...");
-                
+
                 IoC.Container.Resolve<IApiShell>().Start();
 
                 return true;

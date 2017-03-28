@@ -45,7 +45,7 @@ namespace GoMicro.Forex.HostService
 
                 serviceConfig.Service<WebApiHostService>(serviceInstance =>
                 {
-                    serviceInstance.ConstructUsing(() => new WebApiHostService());
+                    serviceInstance.ConstructUsing(n => new WebApiHostService());
                     serviceInstance.WhenStarted((s, hostControl) => s.Start(hostControl));
                     serviceInstance.WhenStopped((s, hostControl) => s.Stop(hostControl));
                     //
