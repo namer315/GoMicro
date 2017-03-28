@@ -30,10 +30,12 @@ namespace GoMicro.Forex.WebApi
         internal class Startup {
             public void Configuration(IAppBuilder appBuilder)
             {
-                var config = new HttpConfiguration();
-                var resolver = new AutofacWebApiDependencyResolver(IoC.Container);
-                config.DependencyResolver = resolver;
-                config.Routes.MapHttpRoute("DefaultApi", "{controller}/{id}", new { id = RouteParameter.Optional });
+                var config = new HttpConfiguration {
+                    DependencyResolver = new AutofacWebApiDependencyResolver(IoC.Container)
+                };
+                //var resolver = new AutofacWebApiDependencyResolver(IoC.Container);
+                //config.DependencyResolver = resolver;
+                config.Routes.MapHttpRoute("Default", "{controller}/{id}", new { id = RouteParameter.Optional });
                 config.MapHttpAttributeRoutes();
                 config.Formatters.Remove(config.Formatters.XmlFormatter);
 

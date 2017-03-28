@@ -22,7 +22,7 @@ namespace GoMicro.Forex.HostService
                 IApiSettings apiSettings = new ApiSettings()
                 {
                     AskTimeOut = 10000,
-                    Url = "http://localhost:9091/"
+                    Url = @"http://localhost:9091"
                 };
                 builder.RegisterInstance(apiSettings).As<IApiSettings>().SingleInstance();
 
