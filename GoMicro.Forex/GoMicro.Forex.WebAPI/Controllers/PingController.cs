@@ -4,6 +4,7 @@ using GoMicro.Forex.Models;
 namespace GoMicro.Forex.WebApi.Controllers
 {
     //[RoutePrefix("Home/v1")]
+     [RoutePrefix("Ping/")]
     class PingController : ApiController
     {
         private readonly IApiSettings _ApiSettings;
@@ -15,6 +16,7 @@ namespace GoMicro.Forex.WebApi.Controllers
 
         [HttpGet]
         //[Route("Ping")]
+        [Route("index")]
         public CommonResult Get()
         {
             return new CommonResult(true,"Pong");
