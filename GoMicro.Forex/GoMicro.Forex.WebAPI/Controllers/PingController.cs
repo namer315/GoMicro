@@ -5,6 +5,7 @@ namespace GoMicro.Forex.WebApi.Controllers
 {
     //for postman testing
     //localhost:9091/home/v1/ping
+    //
     [RoutePrefix("Home/v1")]
     public class PingController : ApiController
     {
